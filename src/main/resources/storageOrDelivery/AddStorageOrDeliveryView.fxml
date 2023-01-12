@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox prefHeight="280.0" prefWidth="600.0"
+      stylesheets="/style/add.css" styleClass="v-box"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.app.controller.srorage.AddStorageOrDeliveryController" alignment="TOP_CENTER">
+    <Label fx:id="baseText" text="Добавление склада" textAlignment="CENTER">
+        <VBox.margin>
+            <Insets top="20" bottom="30"/>
+        </VBox.margin>
+    </Label>
+    <TextField fx:id="name" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Название">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </TextField>
+    <HBox>
+        <Button prefHeight="45.0" onAction="#cansel" prefWidth="200.0" text="Отмена">
+            <HBox.margin>
+                <Insets bottom="40" top="20" left="30"/>
+            </HBox.margin>
+        </Button>
+        <Button prefHeight="45.0" prefWidth="200.0" text="Добавить" onAction="#close">
+            <HBox.margin>
+                <Insets bottom="40" top="20" left="140"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>

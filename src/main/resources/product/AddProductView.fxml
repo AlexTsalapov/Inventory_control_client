@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox prefHeight="650.0" prefWidth="600.0"
+      stylesheets="/style/addProduct.css" styleClass="v-box"
+      alignment="CENTER"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.app.controller.product.AddProductController">
+    <Label fx:id="baseText" text="Добавление товара" textAlignment="CENTER">
+        <VBox.margin>
+            <Insets top="20" bottom="30"/>
+        </VBox.margin>
+    </Label>
+    <ComboBox fx:id="category" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Выберите категорию">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </ComboBox>
+    <TextField fx:id="note" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Номер накладной">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </TextField>
+    <TextField fx:id="name" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Название">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </TextField>
+    <TextField fx:id="amount" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Количество">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </TextField>
+    <TextField fx:id="price" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Стоимость">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </TextField>
+    <TextField fx:id="dateOfManufacture" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Дата производства">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </TextField>
+    <TextField fx:id="dateOfExpiration" prefHeight="45.0" minWidth="350.0" maxWidth="400" promptText="Срок годности">
+        <VBox.margin>
+            <Insets bottom="20"/>
+        </VBox.margin>
+    </TextField>
+    <HBox>
+        <Button prefHeight="45.0" prefWidth="200.0" onAction="#cansel" text="Отмена">
+            <HBox.margin>
+                <Insets bottom="40" top="20" left="30"/>
+            </HBox.margin>
+        </Button>
+        <Button prefHeight="45.0" prefWidth="200.0" text="Создать" onAction="#close">
+            <HBox.margin>
+                <Insets bottom="40" top="20" left="140"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>

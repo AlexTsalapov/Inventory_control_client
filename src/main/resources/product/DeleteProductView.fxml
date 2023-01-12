@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox prefHeight="280.0" prefWidth="600.0"
+      stylesheets="/style/add.css" styleClass="v-box"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.app.controller.product.DeleteProductController" alignment="TOP_CENTER">
+    <Label fx:id="baseText" text="Удаление продукта" textAlignment="CENTER">
+        <VBox.margin>
+            <Insets top="15" bottom="20"/>
+        </VBox.margin>
+    </Label>
+    <Label fx:id="textHelp" minWidth="350.0" maxWidth="400" style="-fx-font-size: 20" textAlignment="CENTER">
+        <VBox.margin>
+            <Insets bottom="15"/>
+        </VBox.margin>
+    </Label>
+    <HBox>
+        <Button prefHeight="45.0" prefWidth="200.0"  text="Отмена" onAction="#flagFalse">
+            <HBox.margin>
+                <Insets bottom="30" top="15" left="30"/>
+            </HBox.margin>
+        </Button>
+        <Button prefHeight="45.0" prefWidth="200.0" text="Удалить" onAction="#flagTrue">
+            <HBox.margin>
+                <Insets bottom="30" top="15" left="140"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>

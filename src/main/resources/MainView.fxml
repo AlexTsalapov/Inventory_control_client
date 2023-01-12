@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="BOTTOM_CENTER" prefHeight="1080.0" prefWidth="1920.0" styleClass="v-box" stylesheets="style/mainView.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controller.MainController">
+    <Label fx:id="text" styleClass="title" text="Склад">
+        <VBox.margin>
+            <Insets top="50" />
+        </VBox.margin>
+    </Label>
+    <StackPane>
+        <HBox fx:id="hboxStorage" alignment="CENTER" visible="true">
+            <ComboBox fx:id="storageBox" maxHeight="50" maxWidth="300" minHeight="50" minWidth="300" onAction="#getActionStorage" promptText="Выберите склад">
+                <HBox.margin>
+                    <Insets right="10" />
+                </HBox.margin>
+            </ComboBox>
+            <MenuBar fx:id="storageMenuBar" maxHeight="50" maxWidth="50" minHeight="50" minWidth="50">
+                <menus>
+                    <Menu fx:id="actionStorage">
+                        <MenuItem fx:id="addStorage" onAction="#addStorage" text="Добавить" />
+                        <MenuItem fx:id="editStorage" onAction="#editStorage" text="Редактировать" />
+                        <MenuItem fx:id="deleteStorage" onAction="#deleteStorage" text="Удалить" />
+                    </Menu>
+                </menus>
+            </MenuBar>
+        </HBox>
+        <HBox fx:id="hboxDelivery" alignment="CENTER" visible="false">
+            <ComboBox fx:id="deliveryBox" maxHeight="50" maxWidth="300" minHeight="50" minWidth="300" onAction="#getActionStorage" promptText="Выберите поставщика">
+                <HBox.margin>
+                    <Insets right="10" />
+                </HBox.margin>
+            </ComboBox>
+            <MenuBar fx:id="deliveryMenuBar" maxHeight="50" maxWidth="50" minHeight="50" minWidth="50">
+                <menus>
+                    <Menu fx:id="deliveryAction" mnemonicParsing="false">
+                        <items>
+                            <MenuItem fx:id="addDelivery" mnemonicParsing="false" onAction="#addDelivery" text="Добавить" />
+                            <MenuItem fx:id="editDelivery" mnemonicParsing="false" onAction="#editDelivery" text="Редактировать" />
+                            <MenuItem fx:id="deleteDelivery" mnemonicParsing="false" onAction="#deleteDelivery" text="Удалить" />
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+        </HBox>
+    </StackPane>
+    <HBox alignment="CENTER_RIGHT">
+        <VBox.margin>
+            <Insets right="310" top="20" />
+        </VBox.margin>
+        <ComboBox fx:id="categoryBox" maxHeight="50" maxWidth="300" minHeight="50" minWidth="300" onAction="#getCategoryAction" promptText="Выберите категорию">
+            <HBox.margin>
+                <Insets right="10" />
+            </HBox.margin>
+        </ComboBox>
+        <MenuBar fx:id="categoryMenuBar" maxHeight="50" maxWidth="50" minHeight="50" minWidth="50">
+            <menus>
+                <Menu fx:id="actionCategory" mnemonicParsing="false" style="-fx-font-size: 25">
+                    <items>
+                        <MenuItem fx:id="addCategory" mnemonicParsing="false" onAction="#addCategory" text="Добавить" />
+                        <MenuItem fx:id="editCategory" mnemonicParsing="false" onAction="#editCategory" text="Редактировать" />
+                        <MenuItem fx:id="deleteCategory" mnemonicParsing="false" onAction="#deleteCategory" text="Удалить" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </HBox>
+    <TableView fx:id="table" maxHeight="700" maxWidth="1300.0" minHeight="700.0" minWidth="1300" onMousePressed="#getTableAction">
+        <VBox.margin>
+            <Insets top="30" />
+        </VBox.margin>
+    </TableView>
+    <HBox alignment="BOTTOM_RIGHT">
+        <VBox.margin>
+            <Insets right="70" top="20" />
+        </VBox.margin>
+        <StackPane>
+            <HBox.margin>
+                <Insets bottom="40" left="70" top="20" />
+            </HBox.margin>
+            <Button fx:id="btnExit" onAction="#toAutorization" prefHeight="45.0" prefWidth="200.0" text="Выход"/>
+            <Button fx:id="btnBack" onAction="#toStorage" prefHeight="45.0" prefWidth="200.0" text="Назад" visible="false"/>
+        </StackPane>
+        <StackPane>
+            <HBox.margin>
+                <Insets bottom="40" left="1500" top="20" />
+            </HBox.margin>
+            <Button fx:id="btnToDelivery" onAction="#toDelivery" prefHeight="45.0" prefWidth="200.0" text="Поставки"/>
+            <Button fx:id="btnOrder" onAction="#createOrder" prefHeight="45.0" prefWidth="200.0" text="Заказать" visible="false"/>
+        </StackPane>
+    </HBox>
+</VBox>
